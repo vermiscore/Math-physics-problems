@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -12,7 +10,6 @@
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 
-```
 <style>
     body {
         margin: 0;
@@ -104,19 +101,19 @@
     }
 
     #btnStart {
-        top: 150px;
-    }
-
-    #btnReset {
         top: 200px;
     }
 
-    #btnXOnly {
+    #btnReset {
         top: 250px;
     }
 
-    #btnImport {
+    #btnXOnly {
         top: 300px;
+    }
+
+    #btnImport {
+        top: 350px;
     }
 
     /* Import panel */
@@ -341,7 +338,6 @@
         width: 75px;
     }
 </style>
-```
 
 </head>
 
@@ -356,50 +352,49 @@
             <button id="btnImport" class="btn home-btn">Import</button>
         </div>
 
-```
-    <!-- Import Panel -->
-    <div id="importPanel" class="panel">
-        <h2 style="text-align: center; color: #e8f5e9; padding-top: 20px;">Import Excel File</h2>
+        <!-- Import Panel -->
+        <div id="importPanel" class="panel">
+            <h2 style="text-align: center; color: #e8f5e9; padding-top: 20px;">Import Excel File</h2>
 
-        <button id="driveBtn" class="btn">📁 Open from Google Drive</button>
+            <button id="driveBtn" class="btn">📁 Open from Google Drive</button>
 
-        <div class="or-divider">OR</div>
+            <div class="or-divider">OR</div>
 
-        <input type="file" id="fileInput" accept=".xlsx, .xls" />
-        <select id="sheetSelector"
-            style="display: none; background: #2d5f4d; color: #e8f5e9; border: 1px solid #4a9d7f;">
-            <option value="">Select a sheet...</option>
-        </select>
-        <button id="importBtn" class="btn" style="display: none;">Load Selected Sheet</button>
-        <button id="backBtn" class="btn">Back</button>
-        <div id="importStatus"></div>
-    </div>
-
-    <!-- Quiz Panel -->
-    <div id="quizPanel" class="panel">
-        <div id="wordLabel"></div>
-        
-        <div class="input-container">
-            <div class="input-group">
-                <label class="input-label">Calculation Workspace:</label>
-                <textarea id="calculationInput" class="input-field" placeholder="Work out your calculation here..."></textarea>
-            </div>
-            <div class="input-group">
-                <label class="input-label">Your Answer:</label>
-                <input type="text" id="answerInput" class="input-field" placeholder="Enter your answer...">
-            </div>
+            <input type="file" id="fileInput" accept=".xlsx, .xls" />
+            <select id="sheetSelector"
+                style="display: none; background: #2d5f4d; color: #e8f5e9; border: 1px solid #4a9d7f;">
+                <option value="">Select a sheet...</option>
+            </select>
+            <button id="importBtn" class="btn" style="display: none;">Load Selected Sheet</button>
+            <button id="backBtn" class="btn">Back</button>
+            <div id="importStatus"></div>
         </div>
 
-        <button id="btnCheck" class="btn quiz-btn">Check</button>
-        <div id="checkResult"></div>
-        <div id="infoLabel"></div>
-        
-        <button id="btnNext" class="btn quiz-btn">Next</button>
-        <button id="btnHome" class="btn quiz-btn">Home</button>
-        <button id="btnCorrect" class="btn quiz-btn">〇</button>
-        <button id="btnWrong" class="btn quiz-btn">×</button>
+        <!-- Quiz Panel -->
+        <div id="quizPanel" class="panel">
+            <div id="wordLabel"></div>
+            
+            <div class="input-container">
+                <div class="input-group">
+                    <label class="input-label">Calculation Workspace:</label>
+                    <textarea id="calculationInput" class="input-field" placeholder="Work out your calculation here..."></textarea>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Your Answer:</label>
+                    <input type="text" id="answerInput" class="input-field" placeholder="Enter your answer...">
+                </div>
+            </div>
+
+            <button id="btnCheck" class="btn quiz-btn">Check</button>
+            <div id="checkResult"></div>
+            <div id="infoLabel"></div>
+            
+            <button id="btnNext" class="btn quiz-btn">Next</button>
+            <button id="btnHome" class="btn quiz-btn">Home</button>
+            <button id="btnCorrect" class="btn quiz-btn">〇</button>
+            <button id="btnWrong" class="btn quiz-btn">×</button>
+        </div>
     </div>
-</div>
 
 <script>
     // Google API Configuration
@@ -823,8 +818,6 @@
     loadVocabulary();
     loadProgress();
 </script>
-```
 
 </body>
-
 </html>
